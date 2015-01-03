@@ -44,7 +44,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
-     ro.telephony.ril_class=SamsungExynos4RIL
+     ro.telephony.ril_class=SamsungOmap4RIL
 
 # Media profiles
 PRODUCT_COPY_FILES += \
