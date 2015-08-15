@@ -14,8 +14,7 @@
 # limitations under the License.
 #
 
-# Include omap4 common makefile
-$(call inherit-product, device/samsung/omap4-common/common.mk)
+$(call inherit-product, hardware/ti/omap4/omap4.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/samsung/espresso-common/overlay/aosp-common
 
@@ -23,6 +22,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
+
+$(call inherit-product, vendor/samsung/omap4-common/common-vendor.mk)
 
 LOCAL_PATH := device/samsung/espresso-common
 
@@ -61,8 +62,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     audio.primary.piranha \
     audio.r_submix.default \
-    camera.piranha \
-    hwcomposer.piranha \
+    camera.omap4 \
     lights.piranha \
     libinvensense_mpl \
     power.piranha
