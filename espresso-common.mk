@@ -26,6 +26,10 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 LOCAL_PATH := device/samsung/espresso-common
 
+# fstab
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/fstab.espresso:root/fstab.espresso
+
 # GPS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.xml:system/etc/gps.xml
